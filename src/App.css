@@ -1,0 +1,70 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.gradiant-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to top, #3b82f6, #93c5fd);
+    color: transparent;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    animation: typing-text steps(40) 3s infinite, blink ease 0.3s infinite;
+    text-wrap: nowrap;
+    display: inline-block;
+    width: max-content;
+    width: 0;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;  /* Adjust this value to move the button closer to the image */
+    right: 10px; /* Adjust this value to move the button closer to the image */
+    /* ...other styles... */
+    background: none;
+    border: none;
+    color: white; /* Change this to a color that contrasts with the background */
+    font-size: 30px;
+    z-index: 1001; /* Increase this to bring the button to the front */
+    pointer-events: auto;
+}
+
+.popup-image {
+    max-width: 66%;
+    height: auto;
+}
+
+
+@keyframes typing-text {
+    from {
+        width: 0%;
+    } 
+    to {
+        width: 350px;
+    }
+}
+
+@keyframes typing-text {
+    to {
+        border-color: transparent;
+    }
+}
+
